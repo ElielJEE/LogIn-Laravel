@@ -8,5 +8,13 @@
 </head>
 <body>
   <h1>Home</h1>
+
+  @auth
+    <p>Has iniciado sesion</p>
+  @endauth
+
+  @guest
+    <p>Debes <a href="/login">iniciar sesion</a></p>
+  @endguest
 </body>
 </html>
