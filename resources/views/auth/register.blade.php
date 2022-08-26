@@ -16,11 +16,11 @@
       <form action="/register" method="POST" class="form-content resgister-form">
         @csrf
         <label class="input-label">
-          <input class="input register-input" type="text" name="user_name" placeholder=" ">
+          <input class="input register-input" type="text" name="user_name" placeholder=" " autocomplete="off">
           <span class="placeholder-span">Ingresar usuario</span>          
         </label>
         <label class="input-label">
-          <input class="input register-input" type="password" name="password" placeholder=" ">
+          <input class="input register-input" type="password" name="password" placeholder=" " autocomplete="off">
           <span class="placeholder-span">Contrseña</span>
         </label>
         <button class="btn-submit">
@@ -28,6 +28,11 @@
             Registrarse
           </span>
         </button>
+        <a href="/login" class="btn-second">
+          <span class="second-btn__title">
+            Iniciar sesion
+          </span>
+        </a>
       </form>
     </div>
   </div>

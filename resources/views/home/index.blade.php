@@ -10,7 +10,8 @@
   <h1>Home</h1>
 
   @auth
-    <p>Has iniciado sesion</p>
+    <p>Has iniciado sesion como <strong>{{auth()->user()->user_name}}</strong></p>
+    <a href="/logout">Cerrar Sesion</a>
   @endauth
 
   @guest
