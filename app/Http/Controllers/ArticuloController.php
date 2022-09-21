@@ -36,11 +36,20 @@ class ArticuloController extends Controller
      */
     public function store(Request $request)
     {
-        $data = request();
-        DB::table('articulos')->insert([
+        /* DB::table('articulos')->insert([
             'articulo_nombre' => $data['articulo_nombre'],
             'cantidad' => $data['cantidad'],
             'precio' => $data['precio']
+        ]); */
+        /* return response()->json([
+            'articulo_nombre' => $request->articulo_nombre,
+            'cantidad' => $request->cantidad,
+            'precio' => $request->precio
+        ]); */
+        Articulo::create([
+            'articulo_nombre' => $request->articulo_nombre,
+            'cantidad' => $request->cantidad,
+            'precio' => $request->precio
         ]);
     }
 
